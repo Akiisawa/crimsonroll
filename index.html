@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0f">
+<title>Crimson Roll Mobile — Ordem Paranormal</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩸</text></svg>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="phone">
+  <div class="screen" id="screen">
+    <div class="wallpaper" id="wallpaper"></div>
+    <div class="sync-status" id="syncStatus"><span class="dot"></span><span id="syncText">conectando</span></div>
+    <div class="statusbar">
+      <span id="sbTime">00:00</span>
+      <div class="sb-right">
+        <span class="sb-signal">▮▮▮</span>
+        <span class="sb-batt"><i></i></span>
+      </div>
+    </div>
+
+    <!-- Banner de notificação -->
+<div class="notif-banner" id="notifBanner">
+  <div class="notif-icon"><i class="fa-solid fa-comment-dots"></i></div>
+  <div class="notif-body">
+    <div class="notif-title" id="notifTitle">Nova mensagem</div>
+    <div class="notif-text" id="notifText"></div>
+  </div>
+  <button class="notif-close" id="notifClose">✕</button>
+</div>
+
+    <div class="island"></div>
+
+    <main class="home" id="home">
+      <div class="widget">
+        <div class="w-time" id="wTime">--:--</div>
+        <div class="w-date" id="wDate"></div>
+        <div class="w-owner" id="wOwner">Agente</div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="dock" id="dock"></div>
+    </main>
+
+    <section class="app-view" id="appView" aria-hidden="true">
+      <header class="app-header">
+        <button class="back" id="backBtn" aria-label="Voltar">‹</button>
+        <h1 id="appTitle">App</h1>
+        <button class="header-btn" id="lockBtn" title="Bloquear"><i class="fa-solid fa-lock"></i></button>
+      </header>
+      <div class="app-body" id="appBody"></div>
+    </section>
+
+    <div class="home-bar" id="homeBar"></div>
+
+    <div class="lock-screen" id="lockScreen">
+      <div class="lock-title">Crimson Roll Mobile</div>
+      <div class="lock-sub">Digite o PIN do agente</div>
+      <div class="pin-dots" id="pinDots"><span></span><span></span><span></span><span></span></div>
+      <div class="pin-pad" id="pinPad">
+        <button data-d="1">1</button><button data-d="2">2</button><button data-d="3">3</button>
+        <button data-d="4">4</button><button data-d="5">5</button><button data-d="6">6</button>
+        <button data-d="7">7</button><button data-d="8">8</button><button data-d="9">9</button>
+        <button class="empty"></button><button data-d="0">0</button>
+        <button class="del" data-del="1"><i class="fa-solid fa-delete-left"></i></button>
+      </div>
+      <div class="lock-error" id="lockError"></div>
+      <div class="lock-hint" id="lockHint"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>  <!-- ← NOVA -->
+<script src="app.js"></script>
+</body>
+</html>
